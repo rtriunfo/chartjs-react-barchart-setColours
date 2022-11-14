@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Chart } from "../components/Chart";
+import { Chart } from "./components/Chart";
 import "./styles.css";
 
 const checkCurrency = (currency) => {
@@ -41,9 +41,9 @@ export default function App() {
             data: data.data.map((crypto) => crypto.priceUsd),
             backgroundColor: data.data.map((crypto) =>
               checkCurrency(crypto.name)
-            )
-          }
-        ]
+            ),
+          },
+        ],
       });
     };
     fetchPrices();
